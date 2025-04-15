@@ -1,24 +1,20 @@
 from abc import ABC, abstractmethod
+from ..Module import Abstract_module
 
-class Indicator_abstraction(ABC):
+class Indicator_abstraction(Abstract_module):
 
     def __init__(self):
         # last index that indicator calculated
         self.last_calculated_index = 0
-        self.indicator_name="custom indicator"
-        self.depends_to=""
-
-    def configure(self,shared_data,config):
-        self.config = config
-        self.shared_data= shared_data
-        self.name = self.config["name"]
+        self.indicator_id="custom indicator instance"
+        self.depends_to="data"
 
     # this method will run in initialization phase
     @abstractmethod
-    def initialize(self):
-        raise NotImplementedError
+    def initialize(self)->str:
+        pass
 
     # this method will run in execution phase
     @abstractmethod
-    def run(self):
+    def run(self)->None:
         raise NotImplementedError
