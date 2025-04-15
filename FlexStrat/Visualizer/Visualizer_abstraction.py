@@ -1,18 +1,19 @@
-from abc import ABC,abstractmethod
+from ..Module import Abstract_module
+from abc import abstractmethod
+from ..Data import Shared_data
 
-class Visualizer_abstraction(ABC):
+class Visualizer_abstraction(Abstract_module):
 
     def Visualizer_abstraction(self):
         self._visualizer_name = "custom visualizer"
 
-    def config(self,config,shared_data):
-        self.config = config
-        self.shared_data = shared_data
+    def create_object(self,new_object):
+        self.shared_data.data["objects"].append(new_object)
 
     @abstractmethod
-    def initialize(self,shared_data):
+    def initialize(self)->None:
         pass
     
     @abstractmethod
-    def run(self):
+    def run(self)->None:
         pass
