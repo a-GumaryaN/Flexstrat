@@ -1,0 +1,32 @@
+{
+    "api": {
+        "src": [
+            "src/api"
+        ]
+    },
+    "indicator": {
+        "src": [
+            "src/indicators"
+        ]
+    },
+    "scripts": {
+        "src": [
+            "src/api"
+        ]
+    },
+    "core": {
+        "src": [
+            "src/core"
+        ]
+    },
+    "visualizer": {
+        "src": [
+            "src/visualizer"
+        ]
+    },
+    "trade_manager":{
+        "src":[
+            "src/trade_manager"
+        ]
+    }
+}
